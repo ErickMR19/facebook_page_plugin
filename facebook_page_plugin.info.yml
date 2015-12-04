@@ -1,0 +1,5 @@
+name: Facebook Page Plugin for Drupal
+type: module
+description: Colocar un bloque de una página de Facebook utilizando 'Facebook Page Plugin'
+core: 8.x
+package: Social

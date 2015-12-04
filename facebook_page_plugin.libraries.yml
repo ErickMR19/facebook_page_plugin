@@ -1,0 +1,4 @@
+facebook_page_plugin.facebook_js_sdk:
+  version: 0.x
+  js:
+    js/fb.js : {}

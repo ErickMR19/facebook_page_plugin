@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Contains facebook_page_plugin.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function facebook_page_plugin_help($route_name, RouteMatchInterface $route_match) {
+  global $base_url;
+  switch ($route_name) {
+    // Main module help for the facebook_page_plugin module.
+    case 'help.page.facebook_page_plugin':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Colocar un bloque de una página de Facebook') . '</p>';
+      $output .= '<h2>' . t('Instructions') . '</h2>';
+      $output .= '<p>' . t('Ir a ') . "<a href='$base_url/admin/structure/block'>" . t('Diseño de Bloques') . '</a>' . t(' en la sección de ') . '<a href="admin/structure/">' . t('Estructura.') . '</a></p>';
+      $output .= '<p>' . t('Hacer clic en \'Colocar bloque\' en la sección donde desea colocar el bloque') . '</p>';
+      $output .= '<p>' . t("Buscar el tipo bloque tipo 'Facebook Page Block' y hacer clic en 'Colocar bloque'") . '</p>';
+      $output .= '<p>' . t("Configurar el bloque con las opciones de preferencia. La sección de URL debe ser de la forma 'https://facebook.com/id_pagina'") . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function facebook_page_plugin_theme() {
+  $theme = [];
+
+  return $theme;
+}
